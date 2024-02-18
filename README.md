@@ -37,24 +37,59 @@ Brief description of the project.
 
 2. Wait for a few seconds, and the home page of the website should automatically open in your default browser.
 
-## Contributing
 
-If you'd like to contribute to this project, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/new-feature`).
-3. Make your changes.
-4. Commit your changes (`git commit -am 'Add new feature'`).
-5. Push to the branch (`git push origin feature/new-feature`).
-6. Create a new Pull Request.
 
 ## Screenshots
 
+## Home Page
 ![Screenshot (605)](https://github.com/pranavkarthik009/blogger/assets/75727629/0c0fae7a-142c-46f0-b0fd-279c33bae715)
 
-## License
+Here's the updated README section for your backend:
 
-[License Name](link_to_license)
+```markdown
+# Backend - Blog App
+
+## Description
+
+Brief description of the backend of the Blog App project.
+
+## Installation
+
+Before starting the server, ensure the following dependencies are installed:
+
+- cors: ^2.8.5
+- express: ^4.18.2
+- mongoose: ^8.1.2
+- nodemon: ^3.0.3
+
+You can install them by running the following command:
+
+```bash
+npm install cors express mongoose nodemon
 ```
+
+## Starting the Server
+
+1. Navigate to the `blog_app` folder in the terminal:
+
+   ```bash
+   cd blog_app
+   ```
+
+2. Start the server by running the following command:
+
+   ```bash
+   npm run dev
+   ```
+
+3. Wait for the server to start. You should see two statements:
+
+   - "Server is started on port number"
+   - "Connected to db"
+
+
+```
+
+Again, make sure to replace `link_to_license` with the actual link to your license and adjust the project name, description, and contributing guidelines according to your project's specifics.
 
 This structure enhances readability and clarity in your README. Ensure you replace `<repository_link>` with the actual link to your repository and provide a proper license link in the License section. Additionally, make sure the image URL is correct and accessible. Adjust the project name, description, and contributing guidelines according to your project's specifics.
