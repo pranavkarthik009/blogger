@@ -88,8 +88,3 @@ npm install cors express mongoose nodemon
    - "Connected to db"
 
 
-```
-
-Again, make sure to replace `link_to_license` with the actual link to your license and adjust the project name, description, and contributing guidelines according to your project's specifics.
-
-This structure enhances readability and clarity in your README. Ensure you replace `<repository_link>` with the actual link to your repository and provide a proper license link in the License section. Additionally, make sure the image URL is correct and accessible. Adjust the project name, description, and contributing guidelines according to your project's specifics.
