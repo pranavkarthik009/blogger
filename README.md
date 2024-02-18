@@ -44,7 +44,7 @@ Brief description of the project.
 ## Home Page
 ![Screenshot (605)](https://github.com/pranavkarthik009/blogger/assets/75727629/0c0fae7a-142c-46f0-b0fd-279c33bae715)
 
-Here's the updated README section for your backend:
+## Backend
 
 ```markdown
 # Backend - Blog App
