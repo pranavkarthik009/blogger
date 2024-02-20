@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const bcrypt = require('bcryptjs');
 
 const app = express();
 app.use(express.json());
@@ -38,8 +39,9 @@ app.post("/Login", async (req, res) => {
     try {
         const user = await User.findOne({ email: email });
         if (user) {
-            if (password === user.password) {
-                res.send({ message: "login success", username:user.username,user_id:user._id });
+            const passwordMatch = await bcrypt.compare(password, user.password);
+            if (passwordMatch) {
+                res.send({ message: "login success", username: user.username, user_id: user._id });
             } else {
                 res.send({ message: "wrong credentials" });
             }
@@ -58,7 +60,8 @@ app.post("/Register", async (req, res) => {
         if (existingUser) {
             res.send({ message: "user already exists" });
         } else {
-            const newUser = new User({ username, email, password });
+            const hashedpassword=await bcrypt.hash(password,10)
+            const newUser = new User({ username, email, password:hashedpassword });
             await newUser.save();
             res.send({ message: "successful" });
         }
