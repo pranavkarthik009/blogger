@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const bcrypt = require('bcryptjs');
+require('dotenv').config({path:'config.env'})
 
 const app = express();
 app.use(express.json());
@@ -10,9 +11,10 @@ app.use(cors({
     origin: 'http://localhost:3000' // Replace with your React app's URL
 }));
 
-mongoose.connect("mongodb+srv://pranav1984:pranav1984@cluster0.efgplkc.mongodb.net/Users?retryWrites=true&w=majority").then(() => {
+
+mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
     console.log("Connected to Db");
-});
+}).catch(err => console.error('Error connecting to MongoDB:', err));
 
 const userSchema = new mongoose.Schema({
     username: String,
